@@ -5,7 +5,7 @@ import About from "../components/About"
 import Community  from "../components/Community"
 import Questions from "../components/Questions"
 import Testimonial from "../components/Testimonial"
-import Courses from "../components/Courses"
+import Robots from "../components/Robots"
 
 
 
@@ -19,8 +19,8 @@ function HomePage() {
         <ScrollUpButton />
         {/*About*/}
         <About/>
-        {/*Courses*/}
-         <Courses/> 
+        {/*Robots*/}
+         <Robots/> 
         {/*Testimonial*/}
         <Testimonial/>
         {/*Community */}

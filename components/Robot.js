@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Course({mainImg, tag, title, timeFrame, riskPercent, tutorImg, tutorName, priceTag}) {
+function Robot({mainImg, tag, title, timeFrame, riskPercent, tutorImg, tutorName, priceTag}) {
   return (
     <div className='p-1 sm:p-2 2xl:p-3 w-1/2 md:w-1/3'>
     <div className=' p-2.5 bg-white shadow-lg space-y-2 transition hover:scale-105 cursor-pointer duration-300 ease-in-out rounded '>
@@ -36,4 +36,4 @@ function Course({mainImg, tag, title, timeFrame, riskPercent, tutorImg, tutorNam
   )
 }
 
-export default Course
+export default Robot

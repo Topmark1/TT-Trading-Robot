@@ -1,11 +1,11 @@
 "use client"
-import Course from "./Course.js"
+import Robot from "./Robot.js"
 import Link from "next/link"
 
-function courses() {
+function Robots() {
   return (
-    <div className="bg-[#F8F9FC]  pt-6 md:pt-12  px-4  md:px-6 lg:px-14 2xl:px-40 flex flex-col items-center text-center font-Sa" id="courses">
-        {/* Browe your Popular courses... */}
+    <div className="bg-[#F8F9FC]  pt-6 md:pt-12  px-4  md:px-6 lg:px-14 2xl:px-40 flex flex-col items-center text-center font-Sa" id="Robots">
+        {/* Browe your Popular Robots... */}
         <h2 className="font-CD font-bold text-[24px] sm:text-[40px] 2xl:text-[54px] leading-[36px] sm:leading-[50px] 2xl:leading-720px]  text-[rgb(88,48,25)]">Browse our popular Robots</h2>
         <p className="font-medium  text-[10px] sm:text-[12px] 2xl:text-[16px] leading-[17px] sm:leading-[23px] 2xl:leading-[30px] text-[#A1A1A1] px-10 sm:px-20 lg:px-40 2xl:px-80 pt-1 pb-4">high-defination video is video of higher resolution and quality than standard definition. while there’s no standard meaning for high definition, generally any standard video image</p>
         {/* courses category select */}
@@ -18,7 +18,7 @@ function courses() {
         {/* Courses, Prices, Rating and other Properties */}
         <div className='flex flex-wrap w-full mt-5 md:mt-8 mb-5 md:mb-10 2xl:mb-14'>
             {/* mapping would be done here from the data base using single Course Component */}
-           <Course 
+           <Robot 
            key="1"
            mainImg='1'
            tag="Mixed"
@@ -29,7 +29,7 @@ function courses() {
            tutorName="Leonard Victor" 
            priceTag="15.00"
            />
-           <Course 
+           <Robot 
            key="2"
            mainImg='2'
            tag="Metal"
@@ -40,7 +40,7 @@ function courses() {
            tutorName="Jeffrey Williams" 
            priceTag="32.00"
            />
-           <Course 
+           <Robot 
            key="3"
            mainImg='3'
            tag="Commodity"
@@ -51,7 +51,7 @@ function courses() {
            tutorName="Claretta Mason" 
            priceTag="55.00"
            />
-           <Course 
+           <Robot 
            key="4"
            mainImg='4'
            tag="Cryptocurrency"
@@ -62,7 +62,7 @@ function courses() {
            tutorName="Jessica Duke" 
            priceTag="45.00"
            />
-           <Course 
+           <Robot 
            key="5"
            mainImg='5'
            tag="Stock"
@@ -73,7 +73,7 @@ function courses() {
            tutorName="Samuel Jacobs" 
            priceTag="25.00"
            />
-           <Course 
+           <Robot 
            key="6"
            mainImg='6'
            tag="Marketing"
@@ -86,10 +86,10 @@ function courses() {
            />
         </div>
         <Link href="/newpage">
-        <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:brightness-75 hover:shadow-2xl bg-[rgb(145,107,42)] text-white text-[10px] sm:text-[12px] 2xl:text-[16px] font-bold mt-2">View Courses</button>
+        <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:brightness-75 hover:shadow-2xl bg-[rgb(145,107,42)] text-white text-[10px] sm:text-[12px] 2xl:text-[16px] font-bold mt-2">View Robots</button>
         </Link>
     </div>
   )
 }
 
-export default courses
+export default Robots
