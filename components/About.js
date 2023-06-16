@@ -7,7 +7,7 @@ function About() {
     <div>
       <div className="bg-[rgb(229,225,252)] flex items-center justify-center" id="about">
                     <img
-                    src="/images/about/Frame 216.PNG"  
+                    src="/images/about/Frame 216.png"  
                     className=" w-full" 
                     alt='partners'
                     />

@@ -12,8 +12,8 @@ export default async function RootLayout({children}) {
     <html lang="en">
     <body className='bg-[#004DB3]'>
   
-    <div className='font-Sa' >
-      
+    <div className='font-SA' >
+       
         {/* Header */}
         <Header />
       {children}
