@@ -1,8 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Robot({mainImg, tag, title, timeFrame, riskPercent, tutorImg, tutorName, priceTag}) {
+
+    function AboutRobot(){
+        
+    }
   return (
-    <div className='p-1 sm:p-2 2xl:p-3 w-1/2 md:w-1/3'>
+    <div className='p-1 sm:p-2 2xl:p-3 w-1/2 md:w-1/3' onClick={AboutRobot}>
+        <Link href={`/about-robot/${title}`}>
     <div className=' p-2.5 bg-white shadow-lg space-y-2 transition hover:scale-105 cursor-pointer duration-300 ease-in-out rounded '>
         <img src={`./images/courses/main_img/${mainImg}.png`} className='w-full' alt=''/>
         <div className='flex justify-between items-center '>
@@ -32,6 +38,7 @@ function Robot({mainImg, tag, title, timeFrame, riskPercent, tutorImg, tutorName
             <h3 className='font-CD font-semibold text-[10px] md:text-[18px] 2xl:text-[24px] text-[rgb(21,104,97)]'>${priceTag}</h3>
         </div>
 </div>
+</Link>
 </div>
   )
 }

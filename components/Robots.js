@@ -1,8 +1,13 @@
 "use client"
+import { useContext, useEffect, useLayoutEffect } from "react"
 import Robot from "./Robot.js"
+import { RobotsContext } from "../utils/Robots.js"
 import Link from "next/link"
 
 function Robots() {
+
+  let robots = useContext(RobotsContext)
+
   return (
     <div className="bg-[#F8F9FC]  pt-6 md:pt-12  px-4  md:px-6 lg:px-14 2xl:px-40 flex flex-col items-center text-center font-Sa" id="Robots">
         {/* Browe your Popular Robots... */}
@@ -18,73 +23,19 @@ function Robots() {
         {/* Courses, Prices, Rating and other Properties */}
         <div className='flex flex-wrap w-full mt-5 md:mt-8 mb-5 md:mb-10 2xl:mb-14'>
             {/* mapping would be done here from the data base using single Course Component */}
+            {robots?.map((botObj)=>
            <Robot 
-           key="1"
-           mainImg='1'
-           tag="Mixed"
-           title="AlphaX34523"
-           timeFrame="30min"
-           riskPercent="3"
-           tutorImg='1'
-           tutorName="Leonard Victor" 
-           priceTag="15.00"
-           />
-           <Robot 
-           key="2"
-           mainImg='2'
-           tag="Metal"
-           title="MetalG88719Z"
-           timeFrame="4hrs"
-           riskPercent="6"
-           tutorImg='2'
-           tutorName="Jeffrey Williams" 
-           priceTag="32.00"
-           />
-           <Robot 
-           key="3"
-           mainImg='3'
-           tag="Commodity"
-           title="CommodulJ7879"
-           timeFrame="4hrs"
-           riskPercent="10"
-           tutorImg='2'
-           tutorName="Claretta Mason" 
-           priceTag="55.00"
-           />
-           <Robot 
-           key="4"
-           mainImg='4'
-           tag="Cryptocurrency"
-           title="BlockRobot0x809273"
-           timeFrame="4hrs"
-           riskPercent="23"
-           tutorImg='4'
-           tutorName="Jessica Duke" 
-           priceTag="45.00"
-           />
-           <Robot 
-           key="5"
-           mainImg='5'
-           tag="Stock"
-           title="StockHackathon500"
-           timeFrame="1 day"
-           riskPercent="3"
-           tutorImg='5'
-           tutorName="Samuel Jacobs" 
-           priceTag="25.00"
-           />
-           <Robot 
-           key="6"
-           mainImg='6'
-           tag="Marketing"
-           title="Introduction to live marketing analysis"
-           timeFrame="10hrs 50min"
-           riskPercent="32"
-           tutorImg='6'
-           tutorName="Adam Smith" 
-           priceTag="25.00"
-           />
-        </div>
+           key={botObj.key}
+           mainImg={botObj.mainImg}
+           tag={botObj.tag}
+           title={botObj.title}
+           timeFrame={botObj.timeFrame}
+           riskPercent={botObj.riskPercent}
+           tutorImg={botObj.tutorImg}
+           tutorName={botObj.tutorName}
+           priceTag={botObj.priceTag}
+            /> )}
+           </div>
         <Link href="/newpage">
         <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:brightness-75 hover:shadow-2xl bg-[rgb(145,107,42)] text-white text-[10px] sm:text-[12px] 2xl:text-[16px] font-bold mt-2">View Robots</button>
         </Link>

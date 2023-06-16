@@ -11,7 +11,7 @@ function Footer() {
           <p className="">Reach out to us on any of our social media networks</p>
           <div className='flex space-x-3 sm:space-x-1 md:space-x-3 lg:pr-3'>
           {[1,5,6,3,4].map((icon)=>
-            <span className='bg-white border-4 border-white rounded-md'><img src={`./images/footer/${icon}${icon==6?".PNG":".svg"}`} alt="icon" className='w-8 sm:w-4 lg:w-8 '/></span>
+            <span className='bg-white border-4 border-white rounded-md'><img src={`./images/footer/${icon}.${icon==6?"PNG":"svg"}`} alt="icon" className='w-8 sm:w-4 lg:w-8 '/></span>
             )}
           </div>
         </div>
