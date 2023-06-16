@@ -75,7 +75,7 @@ function Header() {
               </a>
             </li>
             <li className="text-[rgb(197,173,67)]">
-              <a href="#courses">
+              <a href="#robots">
                 Robots
               </a>
             </li>
@@ -90,9 +90,9 @@ function Header() {
               </a>
             </li>
             <li className="text-[rgb(87,64,24)]">
-              <Link href="/newpage">
+              <a href="#robots">
                <button className="px-5 py-2.5 rounded hover:bg-[rgb(197,173,67)] hover:shadow-2xl bg-white">Check Demo</button> 
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -30,11 +30,11 @@ setNumber((num)=>num<255?num+5:num=255), 100);
         <p className="font-Sa font-medium text-[10px] leading-[14px] sm:leading-[26px] sm:text-[16px] 2xl:w-[500px] ">Build a Custom Robot to your Risk Appetite and Trading market or secure recommended robots by our professionals</p>
 
         <div className="flex font-Sa text-[10px] sm:text-[16px] font-bold my-4">
-        <Link href="/newpage">
-          <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:bg-[rgb(1,169,156)] hover:shadow-2xl border-2 border-white flex items-center mr-3"><span>Start Trading Now </span><span><ArrowUpRightIcon className="w-4 pl-2 font-bold"/></span></button> </Link>
-          <Link href="/newpage">
+        <a href="#robots">
+          <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:bg-[rgb(1,169,156)] hover:shadow-2xl border-2 border-white flex items-center mr-3"><span>Start Trading Now </span><span><ArrowUpRightIcon className="w-4 pl-2 font-bold"/></span></button> </a>
+          <a href="#robots">
           <button className="px-4 sm:px-5 lg:px-8 py-2 sm:py-2.5 2xl:py-4 rounded hover:bg-[rgb(1,169,156)] hover:shadow-2xl hover:text-[rgb(197,173,67)] bg-white text-[rgb(87,64,24)]">Check Demo</button>
-          </ Link>
+          </ a>
         </div>
         <div className="flex items-center">
           <div className="flex w-[90px] sm:w-[140px] 2xl:w-[200px] mr-1 sm:mr-2 " >

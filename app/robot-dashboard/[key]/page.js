@@ -36,13 +36,21 @@ function Info({params:{key}}) {
           {/* Trade Status */}
         <h1 className="text-xl md:text-3xl font-bold text-gray-800 mt-2 mb-1 sm:mt-5 sm:mb-2 ">Analysing Markets...</h1>
         {/* Trades */}
+        <div className="flex space-x-2 space-y-2 flex-wrap items-center justify-center sm:mt-3">
         {Robot?.tradeMarkets?.map((market)=>{
         //state of algorithm condition determining state
-        return ( <div>
-          <h2>{market}</h2>
-          <p>no trade</p>
+        return ( <div className="flex flex-wrap ">
+          {[1,2,3,4].map(()=>
+            <div className="flex flex-col space-y-2 text-xl md:text-3xl p-2 sm:p-5 rounded-md shadow-md transition hover:scale-105 cursor-pointer duration-300 ease-in-out ">
+            <h2>{market}</h2>
+            <p>no trade</p>
+            <p>SL - 0.00000</p>
+            <p>TP - 0.00000</p>
+          </div>
+          )}
           </div>)
         })}
+        </div>
         {/*  Button */}
         <div className="flex space-x-3 mb-2 sm:mb-5">
           <Link href="/">

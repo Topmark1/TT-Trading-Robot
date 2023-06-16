@@ -10,7 +10,7 @@ function Info({params:{key}}) {
   let [Deriv,setDeriv] = useState({})
 
   useEffect(()=>{
-  robots.map((bot)=>bot.title == key && 
+  robots.map((bot)=> bot.title == (key== "custom-build"?bot.title:key ) && 
   setRobot(bot))
   },[])
 
@@ -19,7 +19,7 @@ function Info({params:{key}}) {
     {key:"Minimum Deriv Trading Balance Required",value:("$"+Robot.minDerivBal)},
     {key:"Risk Percentage",value:(Robot.riskPercent+"%")},
     {key:"Time Frame",value:(Robot.timeFrame)},
-    {key:"Trade Markets",value:(Robot.tradeMarkets.join(", "))},
+    {key:"Trade Markets",value:(Robot?.tradeMarkets?.join(", "))},
     {key:"Average Monthly Trades",value:(Robot.aMT+" Trades")},
     {key:"Expected Win Rate",value:(Robot.winRate)},
     {key:"Trade Variation Code",value:(Robot.variation)},
@@ -29,9 +29,13 @@ function Info({params:{key}}) {
 //overflow-x-scroll scrollbar-thin scrollbar-thumb-black
     return (
         <div className="flex flex-col px-4 sm:px-8 2xl:px-12  md:items-center text-center bg-gray-100">
-        <h1 className="text-2xl md:text-6xl font-bold text-gray-800 mt-2 mb-1 sm:mt-5 sm:mb-2 ">{key}</h1>
-        
-        {/* Table */}
+        <h1 className="text-2xl md:text-6xl font-bold text-gray-800 mt-2 mb-1 sm:mt-5 sm:mb-2 ">{Robot.title}</h1>
+        {key== "custom-build"?
+        (
+          <div className="text-4xl"> Custom Build Setup in Prgress</div>
+        ):
+        (/* Table */
+        <div>
         <div className="flex pb-[3px]">
           <table className="table-auto w-full border-collapse border-2 border-gray-800 ">
             <thead>
@@ -113,6 +117,9 @@ function Info({params:{key}}) {
       </form>
         </div>
         </div>
+        </div>)
+        }       
+
         {/*  Button */}
         <div className="flex space-x-3 mb-2 sm:mb-5">
         <Link href={`/payment/${key}`}>
