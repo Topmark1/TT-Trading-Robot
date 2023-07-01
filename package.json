@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deriv/deriv-api": "^1.0.12",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -16,6 +17,7 @@
     "@heroicons/react": "^2.0.13",
     "@material-tailwind/react": "^1.4.2",
     "@next/font": "^13.2.4",
+    "axios": "^1.4.0",
     "clsx": "^1.2.1",
     "firebase": "^9.16.0",
     "next": "13.1.1",
@@ -23,7 +25,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.1.1",
-    "tailwind-scrollbar-hide": "^1.1.7"
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "ws": "^8.13.0"
   },
   "devDependencies": {
     "@types/react": "18.0.28",
