@@ -7,3 +7,4 @@ export default async function handler(req, res) {
   const response   = await api.authorize(process.env.TOKEN)
   res.status(200).json(response)
 }
+//Try to get DerivAPI to work instead of just DerivAPIBasic
